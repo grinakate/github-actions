@@ -15,7 +15,7 @@ public class PicturesController {
 	@GetMapping(value = "/giraffe", produces = MediaType.IMAGE_JPEG_VALUE)
 	public byte[] getImage() throws IOException {
 		InputStream in = getClass().getResourceAsStream(
-				"/giraffes/" + ThreadLocalRandom.current().nextInt(0, 6) + ".jpg");
+				"/giraffes/" + ThreadLocalRandom.current().nextInt(0, 7) + ".jpg");
 		return IOUtils.toByteArray(in);
 	}
 }
